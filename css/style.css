@@ -1,105 +1,85 @@
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-}
 
-/* HEADER / NAV */
+/* HEADER */
 
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
   background-color: #ffeef3;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
-  padding: 24px 0 30px 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  padding: 16px 0;
 }
 
-/* --- ლოგო ცალკე ხაზზე, ცენტრში --- */
-.logo-row {
-  text-align: center;
-  margin-bottom: 8px;
-}
-
-.logo {
-  font-family: "Times New Roman", serif;
-  font-size: 24px;
-  font-weight: 700;
-  color: #6A2E35;
-  letter-spacing: 0.08em;
-}
-
-/* --- ნავიგაცია + svg ლოგო მარცხნივ + ენა მარჯვნივ --- */
-
-.nav-row {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0 40px;             /* ჰაერი მარცხნივ/მარჯვნივ */
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
   display: flex;
-  justify-content: center;     /* მენიუ ცენტრში */
   align-items: center;
+  gap: 40px;
 }
 
-/* SVG ლოგო – უკიდურეს მარცხენა მხარეს */
+/* მარცხენა მხარე: ლოგო + ბრენდის ტექსტი */
 
-.logo-icon {
-  position: absolute;
-  left: 40px;                  /* იგივე დაშორება, რაც KA/EN-ს მარჯვნივ ექნება */
-  top: 50%;
-  transform: translateY(-50%);
+.brand-block {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-mark {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #6A2E35;
 }
 
-.logo-icon img {
-  height: 60px;   /* სცადე 60 ან 64 */
-  width: auto;
+/* ბრენდის ტექსტი */
+
+.brand-text {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #6A2E35;
 }
 
-/* მთავარი მენიუ */
+/* ნავიგაცია */
 
 .main-nav .menu {
-  list-style: none;
   display: flex;
-  gap: 32px;
+  list-style: none;
+  gap: 24px;
 }
 
 .main-nav .menu a {
-  font-size: 15px;
+  font-size: 14px;
   color: #6A2E35;
-  letter-spacing: 0.12em;
   text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-decoration: none;
 }
 
 .main-nav .menu a:hover {
   text-decoration: underline;
 }
 
-/* ენის ჩამრთველი – უკიდურეს მარჯვნივ */
+/* ენის სვიჩერი ბოლომდე მარჯვნივ */
 
 .lang-switch {
-  position: absolute;
-  right: 40px;                 /* სიმეტრია ლოგოს left: 40px-თან */
-  top: 50%;
-  transform: translateY(-50%);
+  margin-left: auto;  
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
 .lang-switch a {
   color: #6A2E35;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 .lang-switch a.active {
-  opacity: 1;
   font-weight: 700;
 }
 
 .lang-switch span {
   color: #6A2E35;
-  opacity: 0.4;
-}
-
-/*  ადაპტაცია ტელეფონისთვის */
-@media (max-width: 768px) {
-  .main-nav .menu {
-    gap: 16px;
-    font-size: 13px;
-  }
 }
