@@ -1,4 +1,3 @@
-/* დროებით, რომ გავიგოთ, ნამდვილად იტვირთება თუ არა CSS */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
@@ -97,7 +96,7 @@ body {
   opacity: 0.4;
 }
 
-/* პატარა ადაპტაცია ტელეფონისთვის */
+/*  ადაპტაცია ტელეფონისთვის */
 @media (max-width: 768px) {
   .main-nav .menu {
     gap: 16px;
